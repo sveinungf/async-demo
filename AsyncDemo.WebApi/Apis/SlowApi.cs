@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AsyncDemo.WebApi.Apis
@@ -15,6 +16,13 @@ namespace AsyncDemo.WebApi.Apis
         {
             await Task.Delay(2000);
             return "Hello world";
+        }
+
+        public async Task<string> CallAsync(string value)
+        {
+            Console.WriteLine("Called API with value " + value);
+            await Task.Delay(2000);
+            return value;
         }
     }
 }
