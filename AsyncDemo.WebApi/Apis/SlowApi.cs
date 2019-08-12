@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace AsyncDemo.WebApi.Controllers
+namespace AsyncDemo.WebApi.Apis
 {
     public class SlowApi
     {

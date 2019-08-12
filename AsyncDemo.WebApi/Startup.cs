@@ -1,4 +1,5 @@
-﻿using AsyncDemo.WebApi.Controllers;
+﻿using AsyncDemo.WebApi.Apis;
+using AsyncDemo.WebApi.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,7 @@ namespace AsyncDemo.WebApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSingleton<SlowApi>();
+            services.AddSingleton<FailingApi>();
         }
 
         public void Configure(IApplicationBuilder app)
